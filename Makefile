@@ -1,2 +1,5 @@
 poppy: poppy.c
-	gcc poppy.c -o poppy
+	gcc -shared poppy.c -o poppy -Wl,-e,entry -fPIC
+
+su: su.c
+	gcc -shared su.c -o suuser -Wl,-e,entry -fPIC
